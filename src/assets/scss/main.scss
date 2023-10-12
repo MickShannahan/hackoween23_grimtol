@@ -1,0 +1,62 @@
+@import "./_variables.scss";
+@import "bootstrap";
+@import "./_overrides.scss";
+@import "./_utilities.scss";
+@import "./loaders.scss";
+
+body{
+  overscroll-behavior: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: var(--body-bg);
+}
+
+main {
+  flex-grow: 1;
+}
+.text-transparent{
+  opacity: 0;
+}
+
+.console-font{
+font-family: $font-mono;
+color: $console-green;
+text-shadow: 0px 0px 3px $console-green-50;
+}
+
+.console-border{
+
+}
+
+.console-window{
+  border: 2px outset $console-green;
+  .bar{
+    height: 1.5em;
+    background-color: $console-green;
+  }
+  .console{
+    border: 2px inset $console-green
+  }
+}
+
+.console-window input.user-input{
+  background-color: transparent;
+  color: $console-green;
+  text-shadow: 0px 0px 3px $console-green-50;
+  border: 0 !important;
+  border-radius: 0px;
+  outline: 0;
+  caret-shape: bar;
+  &:focus{
+    border-bottom: 1px solid $console-green;
+    outline: 0;
+  }
+  +cursor{
+    background-color: red;
+    width: 5px;
+  }
+}
