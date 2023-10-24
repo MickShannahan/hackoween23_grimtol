@@ -2,7 +2,7 @@ import { Entity } from "./Entity.js"
 
 export class Character extends Entity{
   constructor(data){
-    super()
+    super(data.destroyed, data.hidden)
     this.name = data.name
     this.health = data.health
     this.weapon = data.weapon

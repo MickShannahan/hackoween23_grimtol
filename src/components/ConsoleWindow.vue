@@ -9,25 +9,21 @@
     <!--STUB Room info -->
     <section class="col-12 console console-font p-3 ">
       <section>
-        <div id="description"  v-html="text"></div>
+        <div id="text" class="mb-4" v-html="playerText"></div>
       </section>
       <section class="position-relative">
-        <div v-html="room?.discoverText" class="text-transparent"></div>
-        <div id="discover-text" class="position-absolute corner-align" v-html="discoverText"></div>
-      </section>
-      <section class="position-relative">
-        <div v-html="room?.description" class="text-transparent"></div>
-        <div id="description" class="position-absolute corner-align"  v-html="description"></div>
+        <div v-html="windowText" class="text-transparent"></div>
+        <div id="description" class="position-absolute corner-align"  v-html="windowText"></div>
       </section>
       <section id="actions" class="mt-1">
-        <div v-for="(act, i) in actions" :key="'act-'+i" v-html="act.value" class="mt-1 px-2"></div>
+        <div v-for="(act, i) in actions" :key="'act-'+i" v-html=" '-'+ act.value" class="mt-2"></div>
       </section>
 
-      <section class="row mt-3">
+      <section v-if="!showSite" class="row mt-4">
         <form @submit.prevent="handleSubmit">
         <label class="console-font"><i>{{ prompt }}</i></label>
           <div>
-            <input id="user-input" v-model="userInput" type="text" class="user-input w-100">
+            <input id="user-input" autocomplete="false"  v-model="userInput" type="text" class="user-input w-100">
           </div>
         </form>
         <span class="cursor"></span>
@@ -39,17 +35,17 @@
 
 
 <script setup>
-import { computed, onBeforeMount, onMounted,ref, watch } from 'vue';
+import { computed, onBeforeMount, onMounted,ref, watch, watchEffect } from 'vue';
 import { AppState } from '../AppState.js';
 import { logger } from '../utils/Logger.js';
 import {gameService} from '../services/GameService.js'
 
-const artwork = ref('')
-const discoverText = ref('')
-const description = ref('')
-const text = ref('')
+const windowText = ref('')
+const playerText = ref('')
 const userInput = ref('')
+const stateText = computed(()=> AppState.windowText)
 const room = computed(()=> AppState.activeRoom)
+const showSite = computed(()=> AppState.showSite)
 const actions = ref([])
 
 const prompts = ["What would you like to do?", "How do you act?", "How would you like to act?", "What do you do?"]
@@ -58,16 +54,40 @@ onMounted(()=>{
 focusInput()
 })
 
-watch(room, async()=>{
-await typeOut(room.value.discoverText, discoverText)
-await typeOut(room.value.description, description)
-room.value.connectedRooms.forEach((con,i)=>{
-  actions.value[i] = ref('')
-  logger.log(con.description, actions.value[i].value)
-  typeOut(con.description, actions.value[i])
+watch(stateText, async()=>{
+  resetView()
+  await typeOut(stateText.value, windowText)
+  listEntities()
+  listItems()
+  listConnections()
+  await typeOut(prompts[Math.floor(Math.random()*prompts.length)], prompt, 200)
+  focusInput()
 })
-await typeOut(prompts[0], prompt, 200)
-})
+
+
+function resetView(){
+  playerText.value = ''
+  windowText.value = ''
+  actions.value = []
+}
+
+function listConnections(){
+  room.value?.connectedRooms.forEach((con,i)=>{
+    if(con.hidden) return
+
+    actions.value[i] = ref('')
+    logger.log(con.description, actions.value[i].value)
+    typeOut(con.description, actions.value[i])
+  })
+}
+
+function listItems(){
+
+}
+
+function listEntities(){
+
+}
 
 function focusInput(){
   let elm = document.getElementById('user-input')
@@ -75,22 +95,19 @@ function focusInput(){
 }
 
 function handleSubmit(){
-  let raw = userInput.value.split(' ')
-  logger.log('⌨️',raw)
+  let raw = userInput.value.trim().split(' ')
   let command = raw[0]
   let targets = raw.slice(1)
   let result = gameService.takeAction(command, targets)
   userInput.value = ''
-  typeOut(result, text)
+  typeOut(result, playerText)
 }
 
 async function typeOut(type, ref, timeToWrite = 1500){
-  logger.log('typing', type)
   ref.value = ''
   let copy = type.split('')
   let timeout = Math.round(timeToWrite / copy.length)
  await typeIt(copy, ref, timeout)
- console.log('done typeing')
 }
 
 async function typeIt(textArr, ref, timeout){

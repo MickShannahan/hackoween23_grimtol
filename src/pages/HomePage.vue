@@ -4,17 +4,27 @@
     <section class="row">
       <ConsoleWindow/>
     </section>
+
+    <section class="locked " v-if="showSite">
+      <div class="row justify-content-center">
+        <Intro class="col-12 col-md-8 text-white mt-3"/>
+        <Characters/>
+      </div>
+      </section>
   </div>
 </template>
 
 <script setup>
 import { Outside_Grimtol } from '../Rooms.js';
 import ConsoleWindow from '../components/ConsoleWindow.vue';
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import {roomsService} from '../services/RoomsService.js'
+import { AppState } from '../AppState.js';
+import Characters from '../components/Characters.vue';
 onMounted(()=>{
-  roomsService.enter(Outside_Grimtol)
+  roomsService.enter(Outside_Grimtol.name)
 })
+const showSite= computed(()=> AppState.showSite)
 </script>
 
 <style scoped lang="scss">

@@ -48,4 +48,13 @@ export class Connection{
     this.locked = locked
     this.hidden = hidden
   }
+
+  tryMove(targets){
+    let merge = this.room.name + this.room.alias.join('')
+    if(!this.locked){
+      return targets.find(t => t.test(merge))
+    } else {
+      throw new Error({custom: `You cannot, the way is locked`})
+    }
+  }
 }

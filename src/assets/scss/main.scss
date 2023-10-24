@@ -6,6 +6,11 @@
 
 body{
   overscroll-behavior: none;
+  transition: all 2s ease;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #app {
@@ -26,7 +31,11 @@ main {
 font-family: $font-mono;
 color: $console-green;
 text-shadow: 0px 0px 3px $console-green-50;
+&.font-dark{
+  color: #04080F;
 }
+}
+
 
 .console-border{
 
@@ -34,6 +43,7 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .console-window{
   border: 2px outset $console-green;
+  background-color:  black;
   .bar{
     height: 1.5em;
     background-color: $console-green;
@@ -50,7 +60,6 @@ text-shadow: 0px 0px 3px $console-green-50;
   border: 0 !important;
   border-radius: 0px;
   outline: 0;
-  caret-shape: bar;
   &:focus{
     border-bottom: 1px solid $console-green;
     outline: 0;
@@ -60,3 +69,32 @@ text-shadow: 0px 0px 3px $console-green-50;
     width: 5px;
   }
 }
+
+.grimtol-bg{
+  background-color: #04080F !important;
+  background-image: url(src/assets/img/GrimtolpanoBits.png);
+  background-size: contain;
+}
+
+.locked{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px;
+  opacity: 0;
+}
+
+.show-site{
+  .locked.header{
+    grid-template-rows: 150px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+  .locked{
+    opacity: 1;
+    grid-template-rows: 1fr;
+    transition: all 1s ease;
+}
+}
+
