@@ -11,12 +11,14 @@
 </template>
 
 <script setup>
-import { computed, watch } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 import { AppState } from './AppState.js';
+import { logger } from './utils/Logger.js';
 
 
 const appstate  = computed(()=> AppState)
 const showSite = computed(()=> AppState.showSite)
+
 
 watch(showSite, ()=>{
   if(showSite.value){
@@ -24,6 +26,31 @@ watch(showSite, ()=>{
     document.body.classList.add('show-site')
   }
 })
+
+onMounted(()=>{
+  logger.log('register listener')
+  document.addEventListener('scroll',scrollBg)
+})
+
+
+let lastKnownScrollPosition = 0;
+let ticking = false;
+
+function scrollBg(event){
+  lastKnownScrollPosition = window.scrollY;
+  if (!ticking) {
+    requestAnimationFrame(() => {
+    ticking = false;
+    const app = document
+    const body = document.body
+    const amount = lastKnownScrollPosition/10
+    logger.log('scrolling', lastKnownScrollPosition)
+    body.style.backgroundPosition="0px "+ -(amount - 150)+"px"
+  });
+
+  ticking = true;
+}
+}
 
 
 </script>
