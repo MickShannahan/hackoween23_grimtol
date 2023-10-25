@@ -1,17 +1,26 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <!-- STUB console app -->
-    <section class="row">
-      <ConsoleWindow/>
+    <section class="row justify-content-center">
+      <div class="col-12 col-md-7">
+        <ConsoleWindow/>
+      </div>
     </section>
 
     <section class="locked " v-if="showSite">
       <div class="row justify-content-center">
-        <Intro class="col-12 col-md-8 text-white mt-3"/>
-        <Characters/>
+        <Intro class="col-12 col-md-7 text-white mt-3"/>
+        <div class="col-12 col-md-7">
+          <Characters/>
+        </div>
       </div>
-      <HowToUse/>
-      </section>
+    </section>
+    <div class="row gradient-border reversed"></div>
+    <section class="home-foot row ruins-bg justify-content-center">
+      <div class="col-12 col-md-7">
+        <HowToUse/>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -48,5 +57,9 @@ const showSite= computed(()=> AppState.showSite)
       object-position: center;
     }
   }
+}
+
+.home-foot{
+  min-height: 40dvh;
 }
 </style>

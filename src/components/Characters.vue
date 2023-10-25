@@ -1,8 +1,8 @@
 <template>
-  <section class="row font-metal text-white text-center fs-2">
-    <div>
+  <section class="row font-metal text-white text-center mt-5">
+    <h2 class="text-shadow">
       CURSED SOULS
-    </div>
+    </h2>
   </section>
   <div class="container mb-5">
     <section v-for="(char, i ) in characters" :key="'character-profile'+ i" class="d-block d-md-flex justify-content-center character">
