@@ -4,13 +4,15 @@
 @import "./_utilities.scss";
 @import "./loaders.scss";
 
+
 body{
   overscroll-behavior: none;
-  transition: all 2s ease;
   background-position: right bottom;
   background-attachment: fixed;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: background-image 2s ease;
+
 }
 
 #app {
@@ -34,6 +36,10 @@ text-shadow: 0px 0px 3px $console-green-50;
 &.font-dark{
   color: #04080F;
 }
+}
+
+.font-metal{
+  font-family: 'Metal Mania';
 }
 
 
@@ -72,8 +78,10 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .grimtol-bg{
   background-color: #04080F !important;
-  background-image: url(src/assets/img/GrimtolpanoBits.png);
-  background-size: contain;
+  background-image: url(src/assets/img/grimtolTownWide.png);
+  background-size: cover;
+  background-position: left;
+  image-rendering: pixelated;
 }
 
 .locked{

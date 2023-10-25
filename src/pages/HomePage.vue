@@ -10,6 +10,7 @@
         <Intro class="col-12 col-md-8 text-white mt-3"/>
         <Characters/>
       </div>
+      <HowToUse/>
       </section>
   </div>
 </template>
@@ -21,6 +22,7 @@ import { computed, onMounted } from 'vue';
 import {roomsService} from '../services/RoomsService.js'
 import { AppState } from '../AppState.js';
 import Characters from '../components/Characters.vue';
+import HowToUse from '../components/HowToUse.vue';
 onMounted(()=>{
   roomsService.enter(Outside_Grimtol.name)
 })

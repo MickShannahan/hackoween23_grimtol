@@ -2,8 +2,8 @@
   <div class="image">
     <div class="reflection-container">
       <div v-for="n in 9" :class="`reflection-grid-cell cell-${n}`"></div>
-      <div class="reflection-content">
-        <img :src="reveal" class="img-fluid" alt="">
+      <div class="reflection-content frame">
+        <img :src="reveal" class="img-fluid " alt="">
         <img :src="image" class="img-fluid test" alt="">
       </div>
     </div>
@@ -26,7 +26,13 @@ const props = defineProps({
 <style lang="scss" scoped>
 .test{
   transition: all .2s ease;
-  // -webkit-mask-image: linear-gradient(45deg,black 40%, transparent 60%);
+  // -webkit-mask-image: linear-gradient(45deg,black 90%, transparent 100%);
+}
+
+.frame{
+  background-image: url('/src/assets/img/Frame.png');
+  image-rendering: pixelated;
+  padding: 20px;
 }
 
 
@@ -36,7 +42,7 @@ const props = defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 1.75em;
 }
 
 .reflection-container {
@@ -100,7 +106,7 @@ const props = defineProps({
       .cell-#{( ($r*3) + $c - 3)}:hover~.reflection-content {
         transform: rotateX((($r*-7)+15deg)) rotateY((-15deg+($c*7)));
         .test{
-        -webkit-mask-image: linear-gradient(($r*30)-45deg ,black $c*5%, transparent $c*25%);
+        -webkit-mask-image: linear-gradient(($c*30)-40deg ,black $r*10%, transparent $r*25%);
         }
 
 

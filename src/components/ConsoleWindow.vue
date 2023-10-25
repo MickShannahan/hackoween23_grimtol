@@ -2,9 +2,8 @@
 <div class="container-fluid">
   <section class="row console-window">
     <div class="col-12 bar d-flex justify-content-end align-items-center mg-2">
-      <i class="mdi mdi-circle"></i>
-      <i class="mdi mdi-circle"></i>
-      <i class="mdi mdi-circle"></i>
+      <i class="mdi mdi-window-minimize"></i>
+      <i class="mdi mdi-close-thick selectable px-1" @click="revealSite"></i>
     </div>
     <!--STUB Room info -->
     <section class="col-12 console console-font p-3 ">
@@ -122,6 +121,14 @@ async function typeIt(textArr, ref, timeout){
 })
 }
 
+function revealSite(){
+  AppState.activeRoom = AppState.rooms.find(r => r.name == 'Staircase landing')
+  let command = 'go'
+  let targets = ['through', 'the', 'doors']
+  let result = gameService.takeAction(command, targets)
+  userInput.value = ''
+  typeOut(result, playerText)
+}
 
 
 </script>
