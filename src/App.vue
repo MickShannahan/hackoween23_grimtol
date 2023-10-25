@@ -45,7 +45,7 @@ function scrollBg(event){
     const body = document.body
     const amount = lastKnownScrollPosition/10
     logger.log('scrolling', lastKnownScrollPosition)
-    body.style.backgroundPosition="0px "+ -(amount - 150)+"px"
+    body.style.backgroundPosition="-300px "+ -(amount - 150)+"px"
   });
 
   ticking = true;
