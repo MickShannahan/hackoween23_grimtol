@@ -29,27 +29,15 @@ watch(showSite, ()=>{
 </script>
 <style lang="scss">
 @import "./assets/scss/main.scss";
-$topperHeight: 356px;
 
 .bg-grimtol-topper{
   background-image: url('./assets/img/grimtolTopper2.png'), url('./assets/img/grimtolTopper1.png');
   background-repeat: no-repeat, repeat-x;
   background-position: top right, top right;
-  background-size: $topperHeight;
+  background-size: 600px;
   image-rendering: pixelated;
 }
-.gradient-border{
-  height: calc(256 * 2px);
-  width: 100%;
-  background-image: url(./assets/img/transparentgradient.png);
-  background-position: bottom;
-  background-repeat: repeat-x;
-  image-rendering: pixelated;
-  background-size: calc(256 * 2px);
-  position: absolute;
-  top: calc($topperHeight /4);
-  z-index: -1;
-}
+
 
 :root{
   --main-height: calc(100dvh - 32px - 64px);

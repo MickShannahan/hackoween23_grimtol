@@ -4,6 +4,9 @@
 @import "./_utilities.scss";
 @import "./loaders.scss";
 
+$topperHeight: 356px;
+
+
 
 body{
   overscroll-behavior: none;
@@ -14,6 +17,10 @@ body{
   transition: background-image 2s ease;
 
 }
+
+  .text-shadow{
+    text-shadow: 0px 2px #04080F, 0px 3px #04080F, 0px -2px #04080F, 0px -3px #04080F, 2px 0px #04080F, 3px 0px #04080F, -2px 0px #04080F, -3px 0px #04080F,  0px 0px 5px #04080F;
+  }
 
 #app {
   display: flex;
@@ -78,8 +85,16 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .grimtol-bg{
   background-color: #04080F !important;
-  background-image: url(src/assets/img/grimtolTownWide.png);
+  background-image: url(src/assets/img/grimtolTownWideLowContrast.png);
   background-size: cover;
+  background-position: left;
+  image-rendering: pixelated;
+}
+
+.ruins-bg{
+  background-color: #04080F !important;
+  background-image: url(src/assets/img/LowerRuins.png);
+  background-size: contain;
   background-position: left;
   image-rendering: pixelated;
 }
@@ -104,5 +119,23 @@ text-shadow: 0px 0px 3px $console-green-50;
     grid-template-rows: 1fr;
     transition: all 1s ease;
 }
+}
+
+.show-site .gradient-border{
+  height: calc(256 * 2px);
+  width: 100%;
+  background-image: url(./assets/img/transparentgradient.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  image-rendering: pixelated;
+  background-size: calc(256 * 2px);
+  margin-bottom:  calc(-256 * 2px);
+  top: calc($topperHeight /4);
+  z-index: -1;
+  &.reversed{
+  background-image: url(./assets/img/transparentgradientup.png);
+  margin-bottom: 0px;
+  margin-top: calc(-256 * 2px);
+  }
 }
 

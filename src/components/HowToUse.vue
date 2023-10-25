@@ -1,6 +1,6 @@
 <template>
 <section class="row mt-5">
-  <h2 class="col-12 text-center text-white font-metal">
+  <h2 class="col-12 text-center text-white font-metal text-shadow">
     WHAT WOULD YOU LIKE TO DO?
   </h2>
   <div class="console-window p-0">

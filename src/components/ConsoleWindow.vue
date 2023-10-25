@@ -22,7 +22,7 @@
         <form @submit.prevent="handleSubmit">
         <label class="console-font"><i>{{ prompt }}</i></label>
           <div>
-            <input id="user-input" autocomplete="false"  v-model="userInput" type="text" class="user-input w-100">
+            <input id="user-input" autocomplete="off"  v-model="userInput" type="text" class="user-input w-100">
           </div>
         </form>
         <span class="cursor"></span>
