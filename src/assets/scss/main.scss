@@ -87,9 +87,9 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .grimtol-bg{
   background-color: #04080F !important;
-  background-image: url(src/assets/img/grimtolTownWideLowContrast.png), url(src/assets/img/grimtolTownWideLowContrast.png);
-  background-size: cover;
-  background-position: 0px;
+  background-image: url(src/assets/img/grimtolTownWideLowContrast.png);
+  background-size: 145%;
+  background-position: 0px 0px;
   image-rendering: pixelated;
 }
 
