@@ -90,7 +90,7 @@ function listEntities(){
 
 function focusInput(){
   let elm = document.getElementById('user-input')
-  elm.focus()
+  elm?.focus()
 }
 
 function handleSubmit(){

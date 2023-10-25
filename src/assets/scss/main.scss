@@ -15,6 +15,8 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   transition: background-image 2s ease;
+  overflow-y: scroll;
+  height: 100dvh;
 
 }
 
@@ -85,9 +87,9 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .grimtol-bg{
   background-color: #04080F !important;
-  background-image: url(src/assets/img/grimtolTownWideLowContrast.png);
+  background-image: url(src/assets/img/grimtolTownWideLowContrast.png), url(src/assets/img/grimtolTownWideLowContrast.png);
   background-size: cover;
-  background-position: left;
+  background-position: 0px;
   image-rendering: pixelated;
 }
 
@@ -122,19 +124,21 @@ text-shadow: 0px 0px 3px $console-green-50;
 }
 
 .show-site .gradient-border{
-  height: calc(256 * 2px);
+  $borderHeight: 360;
+  height: calc($borderHeight * 2.2px);
   background-image: url(/src/assets/img/transparentgradient.png);
-  background-position: bottom;
+  background-position: top;
   background-repeat: repeat-x;
   image-rendering: pixelated;
-  background-size: calc(256 * 2px);
-  margin-bottom:  calc(-256 * 2px);
+  background-size: calc($borderHeight * 1.75px);
+  margin-bottom:  calc($borderHeight * -2.2px);
   top: calc($topperHeight /4);
   z-index: -1;
   &.reversed{
   background-image: url(/src/assets/img/transparentgradientup.png);
   margin-bottom: 0px;
-  margin-top: calc(-256 * 2px);
+  margin-top: calc($borderHeight * -2.2px);
+  background-position: bottom;
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <!-- STUB console app -->
-    <section class="row justify-content-center">
+    <section class="row justify-content-center mt-5">
       <div class="col-12 col-md-7">
         <ConsoleWindow/>
       </div>
