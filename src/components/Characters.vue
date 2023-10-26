@@ -79,13 +79,13 @@ let characters = [
    },
    {
     name: "Mason's Apprentice",
-    story: "Apprentice to the master stone mason responsible for the monstrous tower being built. Skills comparable to her master at half the age, cursed before many to live in her masters shadow. At least now when people see her, they will know her stonework.",
+    story: "Apprentice to the master stone mason tasked the monstrous tower being built. With skills comparable to her master at half the age, she was cursed before many to live in her masters shadow. At least now when people see her, they will know her stonework.",
     portrait: masonImg,
     turnedPortrait: madusaMasonImg
    },
    {
     name: "Spirit Healer",
-    story: "Not a resident of the city, this renowned healer traveled their for the kings bounty. Unfortunately she did not arrive before the stranger. Even more unfortunate that she took a liking to city and wished not to leave.",
+    story: "Not a resident of the city, this renowned healer traveled there for the kings bounty. Unfortunately she did not arrive before the stranger. Even more unfortunate that she took a liking to the city and wished not to leave.",
     portrait: healerImg,
     turnedPortrait: spiritHealerImg
    }
