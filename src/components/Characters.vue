@@ -84,7 +84,7 @@ let characters = [
     turnedPortrait: madusaMasonImg
    },
    {
-    name: "Spirits Healer",
+    name: "Spirit Healer",
     story: "Not a resident of the city, this renowned healer traveled their for the kings bounty. Unfortunately she did not arrive before the stranger. Even more unfortunate that she took a liking to city and wished not to leave.",
     portrait: healerImg,
     turnedPortrait: spiritHealerImg
