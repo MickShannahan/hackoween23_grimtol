@@ -41,11 +41,9 @@ function scrollBg(event){
   if (!ticking) {
     requestAnimationFrame(() => {
     ticking = false;
-    const app = document
     const body = document.body
     const amount = lastKnownScrollPosition/10
-    logger.log('scrolling', lastKnownScrollPosition)
-    body.style.backgroundPosition="-300px "+ -(amount - 150)+"px"
+    body.style.setProperty('--bg-posY', -(amount -50)+"px")
   });
 
   ticking = true;

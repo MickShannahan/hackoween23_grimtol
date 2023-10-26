@@ -2,21 +2,20 @@
   <div class="container-fluid">
     <!-- STUB console app -->
     <section class="row justify-content-center mt-5">
-      <div class="col-12 col-md-7">
+      <div class="col-12">
         <ConsoleWindow/>
       </div>
     </section>
 
     <section class="locked " v-if="showSite">
       <div class="row justify-content-center">
-        <Intro class="col-12 col-md-7 text-white mt-3"/>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-9 col-lg-8">
           <Characters/>
         </div>
       </div>
     </section>
     <div class="row gradient-border reversed"></div>
-    <section class="home-foot row ruins-bg justify-content-center">
+    <section v-if="showSite" class="home-foot row ruins-bg justify-content-center">
       <div class="col-12 col-md-7">
         <HowToUse/>
       </div>

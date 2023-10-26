@@ -39,6 +39,7 @@ import { AppState } from '../AppState.js';
 import { logger } from '../utils/Logger.js';
 import {gameService} from '../services/GameService.js'
 
+const abort = ref(false)
 const windowText = ref('')
 const playerText = ref('')
 const userInput = ref('')
@@ -94,6 +95,7 @@ function focusInput(){
 }
 
 function handleSubmit(){
+  abort.value = true
   let raw = userInput.value.trim().split(' ')
   let command = raw[0]
   let targets = raw.slice(1)
@@ -103,6 +105,7 @@ function handleSubmit(){
 }
 
 async function typeOut(type, ref, timeToWrite = 1500){
+  abort.value = false
   ref.value = ''
   let copy = type.split('')
   let timeout = Math.round(timeToWrite / copy.length)
@@ -110,6 +113,7 @@ async function typeOut(type, ref, timeToWrite = 1500){
 }
 
 async function typeIt(textArr, ref, timeout){
+  if(abort.value) textArr = []
   return new Promise((res, rej) => {
     setTimeout(async()=>{
     ref.value += textArr.shift()
@@ -117,7 +121,7 @@ async function typeIt(textArr, ref, timeout){
       await typeIt(textArr, ref, timeout)
     }
     res()
-  }, 6)
+  }, 2)
 })
 }
 
@@ -134,6 +138,10 @@ function revealSite(){
 </script>
 
 <style lang="scss" scoped>
+
+.container-fluid{
+  max-width: 100ch;
+}
 
 .corner-align{
   top: 0;

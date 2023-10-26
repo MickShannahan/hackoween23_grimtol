@@ -7,12 +7,12 @@
   <div class="container mb-5">
     <section v-for="(char, i ) in characters" :key="'character-profile'+ i" class="d-block d-md-flex justify-content-center character">
 
-      <div class="col-10 col-md-4">
+      <div class="col-8 offset-2 offset-md-0 col-md-6 col-lg-5">
         <div class="character-portrait">
           <DynamicImage :image="char.portrait" :reveal="char.turnedPortrait"/>
         </div>
       </div>
-      <div class="col-10 col-md-6 console-font d-flex align-items-center" :class="{'order-first': i % 2 == 0}">
+      <div class="col-12 col-md-6 col-lg-6 console-font d-flex align-items-center" :class="{'order-first': i % 2 == 0}">
       <div class="console-window">
         <div class="character-story bar px-2 console-font font-dark">
           {{ char.name }}
@@ -94,9 +94,9 @@ let characters = [
   transform: translateY(-10px);
 }
 
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .character{
-    margin-bottom: -5em;
+    margin-bottom: -4vw;
   }
 
 }
