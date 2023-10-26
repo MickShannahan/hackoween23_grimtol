@@ -16,7 +16,7 @@
     </section>
     <div class="row gradient-border reversed"></div>
     <section v-if="showSite" class="home-foot row ruins-bg justify-content-center">
-      <div class="col-12 col-md-7">
+      <div class="col-12">
         <HowToUse/>
       </div>
     </section>
@@ -28,13 +28,15 @@ import { Outside_Grimtol } from '../Rooms.js';
 import ConsoleWindow from '../components/ConsoleWindow.vue';
 import { computed, onMounted } from 'vue';
 import {roomsService} from '../services/RoomsService.js'
+import {gameService} from '../services/GameService.js'
 import { AppState } from '../AppState.js';
 import Characters from '../components/Characters.vue';
 import HowToUse from '../components/HowToUse.vue';
-onMounted(()=>{
-  roomsService.enter(Outside_Grimtol.name)
-})
 const showSite= computed(()=> AppState.showSite)
+
+onMounted(()=>{
+  gameService.loadState()
+})
 </script>
 
 <style scoped lang="scss">

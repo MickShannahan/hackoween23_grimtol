@@ -54,7 +54,7 @@ onMounted(()=>{
 focusInput()
 })
 
-watch(stateText, async()=>{
+watch([stateText, room], async()=>{
   resetView()
   await typeOut(stateText.value, windowText)
   listEntities()
@@ -105,6 +105,11 @@ function handleSubmit(){
 }
 
 async function typeOut(type, ref, timeToWrite = 1500){
+  let skipType = AppState.showSite
+  if(skipType){
+    ref.value = type
+    return
+  }
   abort.value = false
   ref.value = ''
   let copy = type.split('')
@@ -121,7 +126,7 @@ async function typeIt(textArr, ref, timeout){
       await typeIt(textArr, ref, timeout)
     }
     res()
-  }, 2)
+  }, timeout)
 })
 }
 

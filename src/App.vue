@@ -14,6 +14,7 @@
 import { computed, onMounted, watch } from 'vue';
 import { AppState } from './AppState.js';
 import { logger } from './utils/Logger.js';
+import { gameService } from './services/GameService.js';
 
 
 const appstate  = computed(()=> AppState)
@@ -24,6 +25,8 @@ watch(showSite, ()=>{
   if(showSite.value){
     document.body.classList.add('grimtol-bg')
     document.body.classList.add('show-site')
+  } else {
+    document.body.classList.add('animate')
   }
 })
 

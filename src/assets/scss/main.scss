@@ -104,6 +104,12 @@ text-shadow: 0px 0px 3px $console-green-50;
   image-rendering: pixelated;
   animation: render-bg 2s ease forwards;
 }
+@media (max-width: 768px) {
+  .grimtol-bg::after{
+    background-size: 200%;
+    background-position: -325px var(--bg-posY);
+}
+}
 
 @keyframes render-bg {
   0%{
@@ -118,7 +124,7 @@ text-shadow: 0px 0px 3px $console-green-50;
   background-color: #04080F !important;
   background-image: url(src/assets/img/LowerRuins.png);
   background-size: contain;
-  background-position: left;
+  background-position: top left;
   image-rendering: pixelated;
 }
 
@@ -134,14 +140,16 @@ text-shadow: 0px 0px 3px $console-green-50;
     grid-template-rows: 150px;
     opacity: 1;
     transform: scale(1);
-    transition: all 1s ease;
 }
 
   .locked{
     opacity: 1;
     grid-template-rows: 1fr;
-    transition: all 1s ease;
 }
+}
+
+.animate .locked{
+  transition: all 1s ease;
 }
 
 .show-site .gradient-border{

@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { Outside_Grimtol } from "../Rooms.js";
 import { logger } from "../utils/Logger.js";
 import { roomsService } from "./RoomsService.js";
 
@@ -97,10 +98,13 @@ class GameService{
     let foundRoom = activeRoom.connectedRooms.find(conn =>{
       return conn.tryMove(targets)
     })
-    if(foundRoom.room.name == 'Spire Balcony') AppState.showSite = true;
     if(foundRoom){
       logger.log('foundRoomed', foundRoom)
       roomsService.enter(foundRoom.room.name)
+      if(foundRoom.room.name == 'Spire Balcony'){
+        revealSite()
+      }
+      saveState()
       return `You ${command} ${extra.join(' ')}`
     } else {
       return `You cannot ${command} ${extra}.`
@@ -119,11 +123,36 @@ class GameService{
     return `your current commands are use, move, take, look.`
   }
 
+   loadState(){
+    let raw = localStorage.getItem('hackoween23_Grimtol')
+    if(raw){
+      let data = JSON.parse(raw)
+      AppState.showSite = data.showSite
+      AppState.activeRoom = AppState.rooms.find(r => r.name == data.activeRoom.name)
+      roomsService.enter(AppState.activeRoom.name)
+    } else {
+      logger.log('new game')
+      roomsService.enter(Outside_Grimtol.name)
+    }
+  }
 }
 
 function _regTargets(targets){
   let map = targets.map(t => new RegExp(t, 'ig'))
   return map
 }
+
+function revealSite(){
+  setTimeout(()=>{
+    AppState.showSite = true;
+    saveState()
+  }, 1000)
+}
+
+function saveState(){
+  let data = JSON.stringify(AppState)
+  localStorage.setItem('hackoween23_Grimtol', data)
+}
+
 
 export const gameService = new GameService()

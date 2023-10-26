@@ -41,45 +41,53 @@ import merchantImg from '../assets/img/characters/Merchant.png'
 import mummyMerchantImg from '../assets/img/characters/MummyMerchant.png'
 import masonImg from '../assets/img/characters/Mason.png'
 import madusaMasonImg from '../assets/img/characters/MedusaMason.png'
+import healerImg from '../assets/img/characters/Healer.png'
+import spiritHealerImg from '../assets/img/characters/GhostHealer.png'
 // ---
 import DynamicImage from './DynamicImage.vue';
 
 let characters = [
   {
     name: "Queen of Grimtol",
-    story: "There was a queen that is very nice, then she became evil and sucked the blood of her people. Bleh bleh blood!",
+    story: "Closest to the sickly king, she had a large role in the kingdoms flourishing educational institutions. Now leading the kingdom through it's eternal tragedy",
     portrait: queenImg,
     turnedPortrait: vampQueenImg
    },
   {
     name: "King of Grimtol",
-    story: "There was a queen that is very nice, then she became evil and sucked the blood of her people. Bleh bleh blood!",
+    story: "The beloved king, cursed with the eternal life he was promised, but at the cost of eternal hunger for the blood of his subjects loved...",
     portrait: kingImg,
     turnedPortrait: vampKingImg
    },
    {
-    name: "Town Baker",
-    story: "A humble baker. Was great a making bread and stuff. Often invited to the castle to bake the royal family bread.",
+    name: "Humble Baker",
+    story: "Known for their great baked goods, they were invited many times to the castle for feasts and celebrations... until all his bread was cursed with rot, maggots and flies",
     portrait: bakerImg,
     turnedPortrait: frogBakerImg
    },
    {
-    name: "Not so loyal Knight",
-    story: "A knight not so loyal to the throne. Introducing the king to the dark warlock who transformed the city. Betrayed by the warlock he is now cursed too.",
+    name: "The Most Loyal Knight",
+    story: "Their loyalty to the city was and the law was honored above all else. Even when he discovered his partner had been stealing coin for the poor.",
     portrait: knightImg,
     turnedPortrait: ratKnightImg
    },
    {
-    name: "Eager Merchant",
-    story: "A merchant eager to make a coin sold many of the towns people on the warlocks curse poisons touted as potions.",
+    name: "Magic Merchant",
+    story: "Known by may names and faces, they specialized in goods to benefit the body and minds of people. Unfortunately the products sold were more akin to a snake oils than restorative serums.",
     portrait: merchantImg,
     turnedPortrait: mummyMerchantImg
    },
    {
     name: "Mason's Apprentice",
-    story: "Apprentice to the stone master stone mason responsible for the towers design.",
+    story: "Apprentice to the master stone mason responsible for the monstrous tower being built. Skills comparable to her master at half the age, cursed before many to live in her masters shadow. At least now when people see her, they will know her stonework.",
     portrait: masonImg,
     turnedPortrait: madusaMasonImg
+   },
+   {
+    name: "Spirits Healer",
+    story: "Not a resident of the city, this renowned healer traveled their for the kings bounty. Unfortunately she did not arrive before the stranger. Even more unfortunate that she took a liking to city and wished not to leave.",
+    portrait: healerImg,
+    turnedPortrait: spiritHealerImg
    }
 ]
 
@@ -90,8 +98,12 @@ let characters = [
 
 .character{
   margin-bottom: 1.5em;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-10px);
+}
+
+.animate .character{
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -106,7 +118,7 @@ let characters = [
 }
 
 @for $num from 1 through 10{
-  .character:nth-child(#{$num}){
+  .animate .character:nth-child(#{$num}){
     animation: reveal .75s $num *.75s + 1 ease forwards;
   }
 }

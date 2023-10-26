@@ -1,5 +1,5 @@
 <template>
-<section class="row mt-5">
+<section class="wrapper row mt-5">
   <h2 class="col-12 text-center text-white font-metal text-shadow">
     WHAT WOULD YOU LIKE TO DO?
   </h2>
@@ -26,5 +26,8 @@
 
 
 <style lang="scss" scoped>
-
+.wrapper{
+  max-width: 100ch;
+  margin-inline: auto;
+}
 </style>
