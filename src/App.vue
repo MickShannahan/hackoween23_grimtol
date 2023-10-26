@@ -14,6 +14,7 @@
 import { computed, onMounted, watch } from 'vue';
 import { AppState } from './AppState.js';
 import { logger } from './utils/Logger.js';
+import { gameService } from './services/GameService.js';
 
 
 const appstate  = computed(()=> AppState)
@@ -24,6 +25,8 @@ watch(showSite, ()=>{
   if(showSite.value){
     document.body.classList.add('grimtol-bg')
     document.body.classList.add('show-site')
+  } else {
+    document.body.classList.add('animate')
   }
 })
 
@@ -41,11 +44,9 @@ function scrollBg(event){
   if (!ticking) {
     requestAnimationFrame(() => {
     ticking = false;
-    const app = document
     const body = document.body
     const amount = lastKnownScrollPosition/10
-    logger.log('scrolling', lastKnownScrollPosition)
-    body.style.backgroundPosition="-300px "+ -(amount - 150)+"px"
+    body.style.setProperty('--bg-posY', -(amount -50)+"px")
   });
 
   ticking = true;

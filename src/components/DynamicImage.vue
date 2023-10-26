@@ -32,7 +32,7 @@ const props = defineProps({
 .frame{
   background-image: url('/src/assets/img/Frame.png');
   image-rendering: pixelated;
-  padding: 20px;
+  padding: 7%;
 }
 
 
