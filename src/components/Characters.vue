@@ -1,7 +1,7 @@
 <template>
   <section class="row font-metal text-white text-center mt-5">
     <h2 class="text-shadow">
-      CURSED SOULS
+      A FEW OF THE CURSED SOULS
     </h2>
   </section>
   <div class="container mb-5">
@@ -43,6 +43,8 @@ import masonImg from '../assets/img/characters/Mason.png'
 import madusaMasonImg from '../assets/img/characters/MedusaMason.png'
 import healerImg from '../assets/img/characters/Healer.png'
 import spiritHealerImg from '../assets/img/characters/GhostHealer.png'
+import wizardImg from '../assets/img/characters/Wizard.png'
+import zombieWizardImg from '../assets/img/characters/ZombieWizard.png'
 // ---
 import DynamicImage from './DynamicImage.vue';
 
@@ -73,13 +75,13 @@ let characters = [
    },
    {
     name: "Magic Merchant",
-    story: "Known by may names and faces, they specialized in goods to benefit the body and minds of people. Unfortunately the products sold were more akin to a snake oils than restorative serums.",
+    story: "Known by may names and faces, this merchant specialized in goods to rejuvenate the body and mind. Unfortunately the products sold were more akin to a snake oils than restorative serums.",
     portrait: merchantImg,
     turnedPortrait: mummyMerchantImg
    },
    {
     name: "Mason's Apprentice",
-    story: "Apprentice to the master stone mason tasked the monstrous tower being built. With skills comparable to her master at half the age, she was cursed before many to live in her masters shadow. At least now when people see her, they will know her stonework.",
+    story: "With skills comparable to her master at half the age, she was cursed before many to live in her master's shadow. At least now when people see her, they will know her stonework.",
     portrait: masonImg,
     turnedPortrait: madusaMasonImg
    },
@@ -88,6 +90,12 @@ let characters = [
     story: "Not a resident of the city, this renowned healer traveled there for the kings bounty. Unfortunately she did not arrive before the stranger. Even more unfortunate that she took a liking to the city and wished not to leave.",
     portrait: healerImg,
     turnedPortrait: spiritHealerImg
+   },
+   {
+    name: "Wise Wizard",
+    story: "Once a seeker of knowledge, gathering the greatest minds the realm offered to the city. Now reduced to a crude creature searching for a different form of brain power.",
+    portrait: wizardImg,
+    turnedPortrait: zombieWizardImg
    }
 ]
 

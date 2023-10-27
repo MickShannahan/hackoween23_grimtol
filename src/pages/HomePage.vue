@@ -19,6 +19,9 @@
       <div class="col-12 mb-3">
         <HowToUse/>
       </div>
+      <div class="col-12 mt-5 text-white">
+        <AssetsPack/>
+      </div>
     </section>
   </div>
 </template>
@@ -31,6 +34,7 @@ import ConsoleWindow from '../components/ConsoleWindow.vue';
 import HowToUse from '../components/HowToUse.vue';
 import { gameService } from '../services/GameService.js';
 
+import AssetsPack from '../components/AssetsPack.vue';
 const showSite= computed(()=> AppState.showSite)
 
 onMounted(()=>{
