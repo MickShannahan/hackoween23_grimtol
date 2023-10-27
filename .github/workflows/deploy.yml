@@ -20,3 +20,4 @@ jobs:
         with:
           github_token: ${{ secrets.AUTH_TOKEN }}
           publish_dir: ./docs
+          cname: hackoween_secret_23.codeworksacademy.com
