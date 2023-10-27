@@ -27,6 +27,8 @@ watchEffect(()=>{
     document.body.classList.add('show-site')
   } else {
     document.body.classList.add('animate')
+    document.body.classList.remove('grimtol-bg')
+    document.body.classList.remove('show-site')
   }
 })
 

@@ -2,7 +2,7 @@
 <div class="container-fluid" @click="showMusic = true">
   <section class="row console-window">
     <div class="col-12 bar d-flex justify-content-end align-items-center mg-2">
-      <i class="mdi mdi-window-minimize"></i>
+      <i class="mdi mdi-window-minimize selectable" title="restart the game" @click="resetGame"></i>
       <i class="mdi mdi-close-thick selectable px-1" title="skip the intro" @click="revealSite"></i>
     </div>
     <!--STUB Room info -->
@@ -119,7 +119,7 @@ async function typeOut(type, ref, timeToWrite = 1500){
   ref.value = ''
   let copy = type.split(' ')
   let timeout = Math.round(timeToWrite / copy.length)
- await typeIt(copy, ref, 12)
+ await typeIt(copy, ref, 6)
 }
 
 async function typeIt(textArr, ref, timeout){
@@ -142,6 +142,10 @@ function revealSite(){
   let result = gameService.takeAction(command, targets)
   userInput.value = ''
   typeOut(result, playerText)
+}
+
+function resetGame(){
+  gameService.restartGame()
 }
 
 
