@@ -107,6 +107,11 @@ class GameService{
     let foundRoom = activeRoom.connectedRooms.find(conn =>{
       return conn.tryMove(targets)
     })
+
+    if(extra.includes('away')){
+      return `You turn to run away but find yourself facing forwards again...`
+    }
+
     if(foundRoom){
       logger.log('foundRoomed', foundRoom)
       roomsService.enter(foundRoom.room.name)
