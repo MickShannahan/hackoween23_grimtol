@@ -99,7 +99,7 @@ text-shadow: 0px 0px 3px $console-green-50;
   opacity: 0;
   background-color: #04080F !important;
   background-size: 125%;
-  background-image: url(src/assets/img/grimtolTownWideLowContrast.png);
+  background-image: url(/src/assets/img/grimtolTownWideLowContrast.png);
   background-position: -100px var(--bg-posY);
   image-rendering: pixelated;
   animation: render-bg 2s ease forwards;
@@ -122,7 +122,7 @@ text-shadow: 0px 0px 3px $console-green-50;
 
 .ruins-bg{
   background-color: #04080F !important;
-  background-image: url(src/assets/img/LowerRuins.png);
+  background-image: url(/src/assets/img/LowerRuins.png);
   background-size: contain;
   background-position: top left;
   image-rendering: pixelated;
