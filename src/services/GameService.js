@@ -120,7 +120,7 @@ class GameService{
   }
 
   help(command, extra){
-    return `your current commands are use, move, take, look.`
+    return `your current commands are move and look.`
   }
 
    loadState(){

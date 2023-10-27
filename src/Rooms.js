@@ -6,7 +6,7 @@ export const Outside_Grimtol = new Room({
 name: "Outside Grimtol Tower",
 alias: ["outside", "forrest"],
 description: "The broken spire of Grimtol stands crooked in the mud.",
-discoverText: "Wandering into a clearing from the wood you happen upon an ancient stone tower. it's peak hiding beneath the gnarled tree line. something something, battered bricks and shattered glass, held down by the vines, almost like it's being restrained by the forrest.",
+discoverText: "Wandering into a clearing from the dense forest you happen upon an ancient stone tower. It's peak hiding beneath the gnarled tree line. something something, battered bricks and shattered glass, held down by the vines, almost like it's being restrained by the forrest.",
 })
 
 const Grimtol_Spire = new Room({
