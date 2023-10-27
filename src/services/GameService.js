@@ -47,6 +47,9 @@ class GameService{
         case 'investigate':
         case 'perception' :
         case 'perceive':
+        case 'search':
+        case 'feel':
+        case 'view':
           action = 'look'
           break;
         case 'help':
@@ -56,9 +59,14 @@ class GameService{
         case 'info':
           action = 'help'
           break;
-        default :
+        case 'say':
+        case 'yell':
+        case 'shout':
+        case 'speak' :
           action = 'say'
           break;
+        default :
+          throw new Error(action);
       }
       logger.log('action', action)
       let fn = this[action]
@@ -147,7 +155,7 @@ function revealSite(){
   setTimeout(()=>{
     AppState.showSite = true;
     saveState()
-  }, 5000)
+  }, 3000)
 }
 
 function saveState(){

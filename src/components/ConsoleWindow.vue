@@ -1,9 +1,9 @@
 <template>
-<div class="container-fluid">
+<div class="container-fluid" @click="showMusic = true">
   <section class="row console-window">
     <div class="col-12 bar d-flex justify-content-end align-items-center mg-2">
       <i class="mdi mdi-window-minimize"></i>
-      <i class="mdi mdi-close-thick selectable px-1" @click="revealSite"></i>
+      <i class="mdi mdi-close-thick selectable px-1" title="skip the intro" @click="revealSite"></i>
     </div>
     <!--STUB Room info -->
     <section class="col-12 console console-font p-3 ">
@@ -29,6 +29,7 @@
       </section>
     </section>
   </section>
+  <MusicPlayer v-if="showMusic"/>
 </div>
 </template>
 
@@ -38,6 +39,9 @@ import { computed, onBeforeMount, onMounted,ref, watch, watchEffect } from 'vue'
 import { AppState } from '../AppState.js';
 import { logger } from '../utils/Logger.js';
 import {gameService} from '../services/GameService.js'
+import MusicPlayer from './MusicPlayer.vue';
+
+const showMusic = ref(false)
 
 const abort = ref(false)
 const windowText = ref('')
@@ -95,6 +99,7 @@ function focusInput(){
 }
 
 function handleSubmit(){
+  showMusic.value = true
   abort.value = true
   let raw = userInput.value.trim().split(' ')
   let command = raw[0]
@@ -112,16 +117,16 @@ async function typeOut(type, ref, timeToWrite = 1500){
   }
   abort.value = false
   ref.value = ''
-  let copy = type.split('')
+  let copy = type.split(' ')
   let timeout = Math.round(timeToWrite / copy.length)
- await typeIt(copy, ref, timeout)
+ await typeIt(copy, ref, 12)
 }
 
 async function typeIt(textArr, ref, timeout){
   if(abort.value) textArr = []
   return new Promise((res, rej) => {
     setTimeout(async()=>{
-    ref.value += textArr.shift()
+    ref.value +=  ' '+ textArr.shift()
     if(textArr.length){
       await typeIt(textArr, ref, timeout)
     }

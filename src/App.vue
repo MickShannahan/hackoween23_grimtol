@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, watch } from 'vue';
+import { computed, onMounted, watchEffect } from 'vue';
 import { AppState } from './AppState.js';
 import { logger } from './utils/Logger.js';
 import { gameService } from './services/GameService.js';
@@ -21,7 +21,7 @@ const appstate  = computed(()=> AppState)
 const showSite = computed(()=> AppState.showSite)
 
 
-watch(showSite, ()=>{
+watchEffect(()=>{
   if(showSite.value){
     document.body.classList.add('grimtol-bg')
     document.body.classList.add('show-site')

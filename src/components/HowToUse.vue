@@ -1,5 +1,5 @@
 <template>
-<section class="wrapper row mt-5">
+<section class="wrapper row">
   <h2 class="col-12 text-center text-white font-metal text-shadow">
     WHAT WOULD YOU LIKE TO DO?
   </h2>
@@ -29,5 +29,6 @@
 .wrapper{
   max-width: 100ch;
   margin-inline: auto;
+  margin-top: 7em;
 }
 </style>

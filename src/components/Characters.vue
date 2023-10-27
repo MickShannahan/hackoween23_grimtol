@@ -127,7 +127,7 @@ let characters = [
 
 @for $num from 1 through 10{
   .animate .character:nth-child(#{$num}){
-    animation: reveal .75s $num *.75s + 1 ease forwards;
+    animation: reveal .75s $num *.45s + 1 ease forwards;
   }
 }
 

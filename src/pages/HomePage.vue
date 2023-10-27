@@ -16,10 +16,10 @@
     </section>
     <div class="row gradient-border reversed"></div>
     <section v-if="showSite" class="home-foot row ruins-bg justify-content-center">
-      <div class="col-12">
+      <div class="col-12 col-lg-6">
         <HowToUse/>
       </div>
-      <div class="col-12 mt-5 text-white">
+      <div class="col-12 col-lg-6">
         <AssetsPack/>
       </div>
     </section>
@@ -36,6 +36,7 @@ import { AppState } from '../AppState.js';
 import Characters from '../components/Characters.vue';
 import HowToUse from '../components/HowToUse.vue';
 import AssetsPack from '../components/AssetsPack.vue';
+import MusicPlayer from '../components/MusicPlayer.vue';
 const showSite= computed(()=> AppState.showSite)
 
 onMounted(()=>{

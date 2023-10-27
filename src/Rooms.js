@@ -42,7 +42,7 @@ const Grimtol_Spire_Balcony = new Room({
   The double doors open with a heavy creak, revealing a vast balcony beyond. As you step out onto the balcony, a breathtaking scene unfolds before your eyes. The source of the eerie light you observed earlier becomes clear - it emanates from a ruined city nestled deep below the surface.</p><p>
 
   The city's buildings, though in various states of disrepair, are illuminated by a myriad of lamps and flickering flames, casting an ethereal, almost haunting glow. The streets stretch out as far as your eyes can discern, a labyrinthine network of cobblestone roads and narrow alleys.</p><p>
-  As you look out over this enigmatic city, a sense of recognition washes over you, and you recall the legends and tales you've heard –
+  As you look out over this enigmatic city, a sense of recognition washes over you, and you recall the legends and tales you've heard of <i class="font-metal">Castle Grimtol</i> –
   </p>
   <p>
   In a distant realm a there was a kingdom. It contained a great city that thrived through advancements in science and magic for it's people. Its schools and colleges we know across the land. All this research and knowledge lead to bustling trade, full fields each harvest and of course happy people... But not everyone shared this vision of growth.
@@ -51,13 +51,13 @@ const Grimtol_Spire_Balcony = new Room({
   One day a dark cloud fell upon the land. The beloved king, who had ruled with kindness for many years, fell ill. Confident in his peoples abilities, he offered a generous reward to anyone who could heal him, with the sole desire of continuing the growth of the kingdom. Many healers and sorcerers tried but non could aid him, the sickness was quite unnatural.
 </p>
 <p>
-Then, one fateful day, a mysterious stranger entered the royal court, claiming to not only possess the cure the king seeked but more. However the stranger's proposition was unlike any other. He promised to not only restore the king's health but to bestow upon him and the entire kingdom the gift of eternal life. All that was required was the construction of a tower that reached as high as the tallest mountain in the land. The king, seduced by the stranger's words, agreed without realizing the curse that accompanied the magic.
+Until one morning, a mysterious stranger entered the royal court, claiming to not only possess the cure the king seeked but more. However the stranger's proposition was unlike any other. He promised to not only restore the king's health but to bestow upon him and the entire kingdom the gift of eternal life. All that was required was the construction of a tower that reached as high as the tallest mountain in the land. The king, seduced by the stranger's words, agreed without realizing the curse that accompanied the magic.
 </p>
 <p>
 As years passed, the tower extended towards the clouds. As the tower grew so did the power of the strangers curse, transforming its inhabitants into grotesque and disfigured versions of their former selves.
 </p>
 <p>
-Stories of the curse's grip spread to neighboring kingdoms, sparking fear. In response, several great druids were summoned to contain this monstrous affliction. In a solemn ceremony, they sealed city and it's tower beneath the ground, covering it with a dense forest. With the once-thriving kingdom buried beneath the earth, its grandeur and tragedy faded into forgotten history...
+Stories of the curse's grip spread to neighboring kingdoms, sparking fear. In response, several great druids were summoned to contain this monstrous affliction. In a solemn ceremony, they sealed city and it's tower beneath the ground, covering it with a dense forest. With the once-thriving kingdom buried beneath the earth, <i class="font-metal">Grimtol's</i> grandeur and tragedy faded into forgotten history...
 </p>
   `,
   description: "The stone work of the balcony is in much better condition then that of the tower above. A sizable city can be seen below, alive with all the hustle and bustle of one above ground."
