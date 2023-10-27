@@ -2,7 +2,7 @@
 <div class="container-fluid" @click="showMusic = true">
   <section class="row console-window">
     <div class="col-12 bar d-flex justify-content-end align-items-center mg-2">
-      <i class="mdi mdi-window-minimize" @click="resetGame"></i>
+      <i class="mdi mdi-window-minimize selectable" title="restart the game" @click="resetGame"></i>
       <i class="mdi mdi-close-thick selectable px-1" title="skip the intro" @click="revealSite"></i>
     </div>
     <!--STUB Room info -->
