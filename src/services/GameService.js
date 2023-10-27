@@ -144,6 +144,12 @@ class GameService{
       roomsService.enter(Outside_Grimtol.name)
     }
   }
+
+  restartGame(){
+    localStorage.clear()
+    AppState.showSite = false
+    roomsService.enter(Outside_Grimtol.name)
+  }
 }
 
 function _regTargets(targets){

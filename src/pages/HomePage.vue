@@ -16,10 +16,10 @@
     </section>
     <div class="row gradient-border reversed"></div>
     <section v-if="showSite" class="home-foot row ruins-bg justify-content-center">
-      <div class="col-12 col-lg-6">
+      <div class="col-12">
         <HowToUse/>
       </div>
-      <div class="col-12 col-lg-6">
+      <div class="col-12">
         <AssetsPack/>
       </div>
     </section>

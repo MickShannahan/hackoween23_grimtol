@@ -30,7 +30,9 @@
 .wrapper{
   max-width: 100ch;
   margin-inline: auto;
-  margin-top: 7em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+
 }
 
 p{
