@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="g-icon-"], [class*=" g-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'grimtol_23' !important;
   speak: never;
@@ -25,96 +25,93 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pointer:before {
+.g-icon-pointer:before {
   content: "\e917";
 }
-.icon-pointer-alt:before {
+.g-icon-pointer-alt:before {
   content: "\e91e";
 }
-.icon-bat:before {
+.g-icon-bat:before {
   content: "\e900";
 }
-.icon-book:before {
+.g-icon-book:before {
   content: "\e901";
 }
-.icon-books:before {
+.g-icon-books:before {
   content: "\e902";
 }
-.icon-close:before {
+.g-icon-close:before {
   content: "\e903";
 }
-.icon-cog:before {
+.g-icon-cog:before {
   content: "\e904";
 }
-.icon-cogs:before {
+.g-icon-cogs:before {
   content: "\e905";
 }
-.icon-compass:before {
+.g-icon-compass:before {
   content: "\e906";
 }
-.icon-grave:before {
+.g-icon-grave:before {
   content: "\e907";
 }
-.icon-grimtol:before {
+.g-icon-grimtol:before {
   content: "\e908";
 }
-.icon-grimtol-alt:before {
+.g-icon-grimtol-alt:before {
   content: "\e909";
 }
-.icon-hand:before {
+.g-icon-hand:before {
   content: "\e90a";
 }
-.icon-hand-alt:before {
+.g-icon-hand-alt:before {
   content: "\e90b";
 }
-.icon-heart:before {
+.g-icon-heart:before {
   content: "\e90c";
 }
-.icon-knife:before {
+.g-icon-knife:before {
   content: "\e90d";
 }
-.icon-logo:before {
+.g-icon-logo:before {
   content: "\e90e";
 }
-.icon-logo-alt:before {
+.g-icon-logo-alt:before {
   content: "\e90f";
 }
-.icon-mail:before {
+.g-icon-mail:before {
   content: "\e910";
 }
-.icon-marker:before {
+.g-icon-marker:before {
   content: "\e911";
 }
-.icon-moon:before {
+.g-icon-moon:before {
   content: "\e912";
 }
-.icon-paper:before {
+.g-icon-paper:before {
   content: "\e913";
 }
-.icon-paper_1:before {
-  content: "\e914";
-}
-.icon-pentagram:before {
+.g-icon-pentagram:before {
   content: "\e915";
 }
-.icon-picture:before {
+.g-icon-picture:before {
   content: "\e916";
 }
-.icon-potion:before {
+.g-icon-potion:before {
   content: "\e918";
 }
-.icon-skull:before {
+.g-icon-skull:before {
   content: "\e919";
 }
-.icon-smile:before {
+.g-icon-smile:before {
   content: "\e91a";
 }
-.icon-star:before {
+.g-icon-star:before {
   content: "\e91b";
 }
-.icon-time:before {
+.g-icon-time:before {
   content: "\e91c";
 }
-.icon-web:before {
+.g-icon-web:before {
   content: "\e91d";
 }
