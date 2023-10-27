@@ -22,6 +22,9 @@
       <div class="col-12">
         <AssetsPack/>
       </div>
+      <div class="my-3 text-center">
+        <img :src="cwlogo" alt="codeworks" class="cw-logo">
+      </div>
     </section>
   </div>
 </template>
@@ -35,7 +38,9 @@ import HowToUse from '../components/HowToUse.vue';
 import { gameService } from '../services/GameService.js';
 
 import AssetsPack from '../components/AssetsPack.vue';
-import MusicPlayer from '../components/MusicPlayer.vue';
+
+import cwlogo from '../assets/img/CodeWorks.png';
+
 const showSite= computed(()=> AppState.showSite)
 
 onMounted(()=>{
@@ -67,4 +72,9 @@ onMounted(()=>{
 .home-foot{
   min-height: 40dvh;
 }
+
+.cw-logo{
+  image-rendering: auto;
+}
+
 </style>
