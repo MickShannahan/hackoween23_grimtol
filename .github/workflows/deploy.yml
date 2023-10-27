@@ -20,6 +20,6 @@ jobs:
         with:
           # Token for the repo
           github_token: ${{ secrets.AUTH_TOKEN }}
-          branch: gh-pages
+          branch: test
           force: true
           directory: ./docs
