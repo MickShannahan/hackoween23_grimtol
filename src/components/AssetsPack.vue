@@ -15,6 +15,9 @@
         <p>
           There are many more assets to be used than seen here, how you use them is totally up to you and your team.
         </p>
+        <p>
+          Good Luck and remember to have fun!
+        </p>
       </div>
       </div>
     </div>
