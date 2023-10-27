@@ -1,129 +1,96 @@
 <template>
-  <div class="icon-pack">
-    <div class="fs1">
-      <div>
-        <span class="icon-pointer"></span>
-        <span class="mls"> icon-pointer</span>
+  <div class="i-pack console-font p-2">
+    <p>Well known Symbols in the kingdom</p>
+    <div class="d-flex gap-3 align-items-center flex-wrap m-3">
+      <div class="i-group">
+        <span title="g-icon-pointer" class="g-icon-pointer"></span>
       </div>
-      <div>
-        <span class="icon-pointer-alt"></span>
-        <span class="mls"> icon-pointer-alt</span>
+      <div class="i-group">
+        <span title="g-icon-pointer-alt" class="g-icon-pointer-alt"></span>
       </div>
-      <div>
-        <span class="icon-bat"></span>
-        <span class="mls"> icon-bat</span>
+      <div class="i-group">
+        <span title="g-icon-bat" class="g-icon-bat"></span>
       </div>
-      <div>
-        <span class="icon-book"></span>
-        <span class="mls"> icon-book</span>
+      <div class="i-group">
+        <span title="g-icon-book" class="g-icon-book"></span>
       </div>
-      <div>
-        <span class="icon-books"></span>
-        <span class="mls"> icon-books</span>
+      <div class="i-group">
+        <span title="g-icon-books" class="g-icon-books"></span>
       </div>
-      <div>
-        <span class="icon-close"></span>
-        <span class="mls"> icon-close</span>
+      <div class="i-group">
+        <span title="g-icon-close" class="g-icon-close"></span>
       </div>
-      <div>
-        <span class="icon-cog"></span>
-        <span class="mls"> icon-cog</span>
+      <div class="i-group">
+        <span title="g-icon-cog" class="g-icon-cog"></span>
       </div>
-      <div>
-        <span class="icon-cogs"></span>
-        <span class="mls"> icon-cogs</span>
+      <div class="i-group">
+        <span title="g-icon-cogs" class="g-icon-cogs"></span>
       </div>
-      <div>
-        <span class="icon-compass"></span>
-        <span class="mls"> icon-compass</span>
+      <div class="i-group">
+        <span title="g-icon-compass" class="g-icon-compass"></span>
       </div>
-      <div>
-        <span class="icon-grave"></span>
-        <span class="mls"> icon-grave</span>
+      <div class="i-group">
+        <span title="g-icon-grave" class="g-icon-grave"></span>
       </div>
-      <div>
-        <span class="icon-grimtol"></span>
-        <span class="mls"> icon-grimtol</span>
+      <div class="i-group">
+        <span title="g-icon-grimtol" class="g-icon-grimtol"></span>
       </div>
-      <div>
-        <span class="icon-grimtol-alt"></span>
-        <span class="mls"> icon-grimtol-alt</span>
+      <div class="i-group">
+        <span title="g-icon-grimtol-alt" class="g-icon-grimtol-alt"></span>
       </div>
-      <div>
-        <span class="icon-hand"></span>
-        <span class="mls"> icon-hand</span>
+      <div class="i-group">
+        <span title="g-icon-hand" class="g-icon-hand"></span>
       </div>
-      <div>
-        <span class="icon-hand-alt"></span>
-        <span class="mls"> icon-hand-alt</span>
+      <div class="i-group">
+        <span title="g-icon-hand-alt" class="g-icon-hand-alt"></span>
       </div>
-      <div>
-        <span class="icon-heart"></span>
-        <span class="mls"> icon-heart</span>
+      <div class="i-group">
+        <span title="g-icon-heart" class="g-icon-heart"></span>
       </div>
-      <div>
-        <span class="icon-knife"></span>
-        <span class="mls"> icon-knife</span>
+      <div class="i-group">
+        <span title="g-icon-knife" class="g-icon-knife"></span>
       </div>
-      <div>
-        <span class="icon-logo"></span>
-        <span class="mls"> icon-logo</span>
+      <div class="i-group">
+        <span title="g-icon-logo" class="g-icon-logo"></span>
       </div>
-      <div>
-        <span class="icon-logo-alt"></span>
-        <span class="mls"> icon-logo-alt</span>
+      <div class="i-group">
+        <span title="g-icon-logo-alt" class="g-icon-logo-alt"></span>
       </div>
-      <div>
-        <span class="icon-mail"></span>
-        <span class="mls"> icon-mail</span>
+      <div class="i-group">
+        <span title="g-icon-mail" class="g-icon-mail"></span>
       </div>
-      <div>
-        <span class="icon-marker"></span>
-        <span class="mls"> icon-marker</span>
+      <div class="i-group">
+        <span title="g-icon-marker" class="g-icon-marker"></span>
       </div>
-      <div>
-        <span class="icon-moon"></span>
-        <span class="mls"> icon-moon</span>
+      <div class="i-group">
+        <span title="g-icon-moon" class="g-icon-moon"></span>
       </div>
-      <div>
-        <span class="icon-paper"></span>
-        <span class="mls"> icon-paper</span>
+      <div class="i-group">
+        <span title="g-icon-paper" class="g-icon-paper"></span>
       </div>
-      <div>
-        <span class="icon-paper_1"></span>
-        <span class="mls"> icon-paper_1</span>
+      <div class="i-group">
+        <span title="g-icon-pentagram" class="g-icon-pentagram"></span>
       </div>
-      <div>
-        <span class="icon-pentagram"></span>
-        <span class="mls"> icon-pentagram</span>
+      <div class="i-group">
+        <span title="g-icon-picture" class="g-icon-picture"></span>
       </div>
-      <div>
-        <span class="icon-picture"></span>
-        <span class="mls"> icon-picture</span>
+      <div class="i-group">
+        <span title="g-icon-potion" class="g-icon-potion"></span>
       </div>
-      <div>
-        <span class="icon-potion"></span>
-        <span class="mls"> icon-potion</span>
+      <div class="i-group">
+        <span title="g-icon-skull" class="g-icon-skull"></span>
       </div>
-      <div>
-        <span class="icon-skull"></span>
-        <span class="mls"> icon-skull</span>
+      <div class="i-group">
+        <span title="g-icon-smile" class="g-icon-smile"></span>
       </div>
-      <div>
-        <span class="icon-smile"></span>
-        <span class="mls"> icon-smile</span>
+      <div class="i-group">
+        <span title="g-icon-star" class="g-icon-star"></span>
       </div>
-      <div>
-        <span class="icon-star"></span>
-        <span class="mls"> icon-star</span>
+      <div class="i-group">
+        <span title="g-icon-time" class="g-icon-time"></span>
       </div>
-      <div>
-        <span class="icon-time"></span>
-        <span class="mls"> icon-time</span>
-      </div>
-      <div>
-        <span class="icon-web"></span>
-        <span class="mls"> icon-web</span>
+      <div class="i-group">
+        <span title="g-icon-web" class="g-icon-web"></span>
       </div>
     </div>
   </div>
@@ -139,4 +106,17 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.i-pack {
+
+  .i-group {
+    width: 50px;
+  }
+
+
+  [class^="g-icon"] {
+    font-size: 32px;
+  }
+
+}
+</style>
