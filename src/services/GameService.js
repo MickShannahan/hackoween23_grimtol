@@ -19,10 +19,11 @@ class GameService{
         case 'skip':
         case 'frolic':
         case 'enter':
+        case 'open' :
           action = 'move'
           break;
         case 'use':
-        case 'open':
+        // case 'open':
           action = 'use'
           break;
         case 'strike':
@@ -146,7 +147,7 @@ function revealSite(){
   setTimeout(()=>{
     AppState.showSite = true;
     saveState()
-  }, 1000)
+  }, 5000)
 }
 
 function saveState(){
