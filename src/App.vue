@@ -1,7 +1,7 @@
 <template>
   <header class="text-center locked header text-white bg-grimtol-topper">
     <div class="container-fluid d-flex justify-content-center">
-      <img src="src/assets/img/GrimLogo.png" alt="castle grimtol logo" class="grimtol-logo">
+      <img :src="logo" alt="castle grimtol logo" class="grimtol-logo">
     </div>
   </header>
   <section class="gradient-border"></section>
@@ -13,8 +13,8 @@
 <script setup>
 import { computed, onMounted, watchEffect } from 'vue';
 import { AppState } from './AppState.js';
+import logo from './assets/img/GrimLogo.png';
 import { logger } from './utils/Logger.js';
-import { gameService } from './services/GameService.js';
 
 
 const appstate  = computed(()=> AppState)
